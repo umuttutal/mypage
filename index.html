@@ -4,13 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My App</title>
+    <title>ProjectLoveDemo</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
 </head>
 <body>
-    <h1>Hello</h1>
-    <input type="text" maxlength="140" placeholder="Enter your message">
+    <div class="text-container">
+        <h1>ne kadar kolaymıs idiskoo</h1>
+    </div>
+    <input type="text" maxlength="140" placeholder="fikirlerini yaz bana babyy, okuyabiliyorum ;)">
 
+    <div class="container">
+        <div class="child">
+            <img class = "spidey" src = "assets/spiderman.png" alt="spideyimg">
+            <div class = "shadow"> </div>
+
+    <!-- Add Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+    
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyC5L7i4Firl14k7cuNh-3NJv_kK5lziHA8",
+            authDomain: "projectlovedemo.firebaseapp.com",
+            projectId: "projectlovedemo",
+            storageBucket: "projectlovedemo.appspot.com",
+            messagingSenderId: "1085803371815",
+            appId: "1:1085803371815:web:3ade4fa8b4ba45f6a05d02",
+            measurementId: "G-Z6SV39NDSB"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const analytics = firebase.analytics(); // Initialize Firebase Analytics
+    </script>
     <script src="script.js"></script> <!-- Link to your external JavaScript file -->
 </body>
 </html>
