@@ -1,91 +1,39 @@
 body {
+    margin: 0;
     height: 100vh;
-    display: flex;
-    flex-direction: column; /* Set the flex direction to column to stack items vertically */
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
-
-.text-container {
-    margin-bottom: 5rem; /* Add margin to create space between the text and the input box */
-}
-
-h1 {
-    font-family: 'Roboto Mono', Times, serif;
-    margin: 0; /* Reset margin to remove default margin from heading */
-}
-
-input[type=text] {
-    padding: 0.5rem;
-    width: 80%;
-    max-width: 400px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    outline: none;
+    background-color: #CFC6CF;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Align container to the right */
-    align-items: flex-start; /* Align container to the top */
-    position: absolute; /* Position the container absolutely */
-    top: 0px; /* Align the container to the top edge of the viewport */
-    right: 40px; /* Align the container to the right edge of the viewport */
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    right: 40px;
 }
 
-.container .spidey{
-    width: 120px; /* Ensure image does not exceed container width */
-    height: auto; /* Maintain aspect ratio */
-    vertical-align: top;
-    margin-top: 0px;
-    animation-name: animar;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+.spidey {
+    width: 120px;
+    height: auto;
+    animation: animar 2s alternate infinite;
 }
 
-.shadow{
+.shadow {
     width: 50px;
     height: 20px;
-    margin: 20px 0;
-    margin-left: 28px;
+    margin: 20px 0 20px 28px;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 50%;
     animation: sombra 2s alternate infinite;
 }
 
 @keyframes animar {
-    
-    from {
-        transform: translateY(-50px);
-    }
-
-    to {
-        transform: translateY(0px);
-    }
+    from { transform: translateY(-50px); }
+    to   { transform: translateY(0); }
 }
 
 @keyframes sombra {
-    
-    0%{
-        transform: scale(1);
-    }
-
-    100%{
-        transform: scale(0.6);
-        opacity: 0.2;
-    }
-
-}
-
-
-/* Media query for smartphones */
-@media only screen and (max-width: 430px) {
-
-    .container {
-        visibility: collapse;
-        right: 0px; /* Adjust container position for smartphones */
-    }
+    0%   { transform: scale(1); }
+    100% { transform: scale(0.6); opacity: 0.2; }
 }
